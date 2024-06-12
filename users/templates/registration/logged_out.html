@@ -1,0 +1,15 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'logged_out.css' %}">
+{% endblock links %}
+
+{% block content %}
+  <div class="line"></div>
+  
+  <h2>Ви вийшли з системи. Дякуємо за візит!</h2>
+
+  <div class="line"></div>
+{% endblock content %}

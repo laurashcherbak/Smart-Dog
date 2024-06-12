@@ -1,0 +1,106 @@
+.line {
+    width: auto;
+    height: 1vw;
+    background: #F2D2A3;
+}
+
+.login_div {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #211C16;
+    font-family: "Montserrat Alternates";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+button {
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 4vw;
+    border-radius: 1.2vw;
+    border: 0.2vw solid #211C16;
+    background: #A67C52;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #F7E7CE;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+p {
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1vw;
+}
+
+.form {
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 55vw; /* Фіксована ширина форми */
+    margin: 0 auto; /* Центрування форми на сторінці */
+    padding: 1vw;
+}
+
+label {
+    padding: 0.5vw;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.helptext {
+    padding: 0.5vw;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+ul li {
+    padding: 0.5vw;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input {
+    width: 55vw;
+    height: 5vw; /* Збільшено висоту поля вводу */
+    border: 3px solid #211C16;
+    background: #FFF;
+    margin-bottom: 10px; /* Збільшено margin для відокремлення від кнопки */
+}
+
+

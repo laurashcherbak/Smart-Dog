@@ -1,0 +1,61 @@
+h2 {
+    color: #211C16;
+    font-family: "Limelight";
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.line {
+    width: auto;
+    height: 1vw;
+    background: #211C16;
+}
+
+.intro {
+    padding: 2.5vw;
+    background-color: #F2D2A3;
+    background-image: url('abot_user_courses.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3 {
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+
+ul li {
+    color: #000;
+    text-align: justify;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+h4 {
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+a {
+    color: #000;
+}

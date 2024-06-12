@@ -1,0 +1,42 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'user_courses.css' %}">
+{% endblock links %}
+
+{% block content %}
+
+    <div class="line"></div>
+
+    <div class="navs">
+        <nav>
+            <h3 class="h3-nav">Ваші можливості</h3>
+            <a href="{% url 'smart_dogs:user_courses' %}" class="a-nav">ваші курси</a>
+            <a href="{% url 'smart_dogs:dog_quiz' %}" class="a-nav">підібрати курс</a>
+            
+        </nav>
+
+
+        <div class="nav-courses">
+            <h1 class="h3-nav">Опитування про вашу собаку</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="l_button">подати</button>
+            </form>
+
+
+            {% if recommended_course %}
+                <h2>Рекомендований курс:</h2>
+                <p>{{ recommended_course }}</p>
+            {% elif no_course_found %}
+                <p>Рекомендований курс не знайдено. Будь ласка, спробуйте ще раз або зв'яжіться з адміністратором.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+{% endblock content %}

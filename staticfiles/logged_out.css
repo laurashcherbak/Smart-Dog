@@ -1,0 +1,15 @@
+.line {
+    width: auto;
+    height: 1vw;
+    background: #211C16;
+}
+
+h2 {
+    color: #211C16;
+    font-family: "Montserrat Alternates";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5vw;
+}

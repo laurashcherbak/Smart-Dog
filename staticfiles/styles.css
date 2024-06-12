@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #FFF;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    position: fixed;
+    width: 98%;
+    z-index: 999;
+}
+
+.logo {
+    color: #211C16;
+    font-family: Limelight;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;  /* Забезпечте відсутність підкреслення у посилань */
+}
+
+.header_links {
+    margin-right: 1vw;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.username {
+    font-family: "Roboto Condensed";
+    color: #000;
+    font-size: 1vw; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login {
+    font-family: "Roboto Condensed";
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.logout_button {
+    width: 10vw;
+    height: 4vw;
+    border-radius: 1vw;
+    border: 0.3vw solid #211C16;
+    background: #FFF;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer {
+    height: 25vw;
+    background: #F2D2A3;
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5vw;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vw;
+
+}
+
+.footer_phrase {
+    margin-right: 5vw;
+    margin-top: 2vw;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: end;
+}
+
+body {
+    margin-top: 130px;
+}
+

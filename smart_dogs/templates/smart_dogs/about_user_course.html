@@ -1,0 +1,35 @@
+<!-- about_user_course.html -->
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'about_user_course.css' %}">
+{% endblock links %}
+
+
+
+{% block content %}
+    <div class="line"></div>
+
+
+    <div class="intro">
+        <h2>Вітаємо, {{ user.username }} на курсі "{{ course.text }}"!</h2>
+
+        <!-- Відображення модулів та розділів -->
+        <h3>Програма курсу:</h3>
+        {% for module in modules %}
+            <h4>{{ module }}</h4>
+            <ul>
+                {% for section in module.modulesection_set.all %}
+                    <li>
+                        <a href="{% url 'smart_dogs:section_detail' section.id %}">{{ section.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+    <div class="line"></div>
+
+{% endblock content %}

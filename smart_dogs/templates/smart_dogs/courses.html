@@ -1,0 +1,30 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'courses.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <div class="courses">
+        <div class="main_photo_courses"></div>
+
+        <h2 class="cs">КУРСИ</h2>
+
+        <div class="all_courses">
+            {% for course in courses %}
+                <div class="course">
+                    {% if course.image %}
+                    <img src="{{ course.image.url }}" alt="{{ course.text }}" style="width: 26vw; height: 19vw; object-fit: cover;">
+                    {% endif %}
+                    <a href="{% url 'smart_dogs:about_course' course.id %}" class="courses_name">{{ course.text }}</a>
+                </div>
+            {% empty %}
+                <p class="courses_name2">Жодного курсу не було додано.</p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock content %}

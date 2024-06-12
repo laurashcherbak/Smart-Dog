@@ -1,0 +1,63 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'about_course.css' %}">
+{% endblock links %}
+
+
+
+{% block content %}
+    {% if course.image %}
+        <img src="{{ course.image.url }}" alt="{{ course.text }}" style="width: 100%; height: 25vw; object-fit: cover;">
+    {% endif %}
+
+    <div class="about_course">
+
+        <h2>{{ course.text }}</h2>
+
+        {% if course.about_course_set.all %}
+        <!-- Якщо програма курсу існує, показати кнопку "Зареєструватися" -->
+            
+            <a href="{% url 'smart_dogs:register_course' course.id %}" class="main_button">зареєструватися</a>
+            
+        {% else %}
+            <!-- Якщо програми курсу немає, вивести повідомлення -->
+            <p>Зареєструватися можна буде пізніше, коли з'явиться програма курсу. Слідкуйте за оновленнями на сайті.</p>
+        {% endif %}
+
+
+        <h3>Опис курсу:</h3>
+        <div class="list">
+            <ul>
+                {% for about_course in about_course_set %}
+                    <li>{{ about_course.phrase }}</li>
+                    <li>{{ about_course.course_description }}</li>
+                    <li>Для кого підійде курс: {{ about_course.get_target_audience_display }}</li>
+                {% empty %}
+                    <li>Жодного опису не знайдено.</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <h3>Програма курсу:</h3>
+        
+        {% for module in modules %}
+            <h4>{{ module }}</h4>
+            <div class="list">
+                <ul>
+                    {% for section in module.modulesection_set.all %}
+                        <li>{{ section.title }} - {{ section.content }}</li>
+                    {% empty %}
+                        <li>Жодного розділу не знайдено.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% empty %}
+            <p>Жодного модуля не знайдено.</p>
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}

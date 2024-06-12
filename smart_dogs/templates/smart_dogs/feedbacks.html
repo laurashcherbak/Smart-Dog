@@ -1,0 +1,48 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'feedbacks.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <div class="main_photo_feedbacks">
+        <h2>Відгуки</h2>
+    </div>
+
+
+    <div class="newpost">
+        {% if user.is_authenticated %}
+            <div class="main_button2">
+                <a href="{% url 'smart_dogs:new_feedback' %}">додати новий відгук</a>
+            </div>
+        {% else %}
+            <p class="p_feedback2">
+                Щоб додати новий відгук 
+                <a href="{% url 'smart_dogs:authentication' %}" class="p_feedback2">увійдіть</a>.
+            </p>
+        {% endif %}
+
+
+        <div class="feedbacks">
+            {% for feedback in feedbacks %}
+                <div class="feedback">
+                    <p class="p_feedback2">{{ feedback.date_added|date:'d.m.Y H:i' }} - {{ feedback.owner.username }}</p>
+                    <p class="p_feedback">{{ feedback.text|linebreaks }}</p>
+
+                    {% if feedback.owner == user %}
+                        <a href="{% url 'smart_dogs:edit_feedback' feedback.id %}" class="p_feedback2">редагувати</a>
+                    {% endif %}
+
+                    </div> 
+            {% empty %}
+                <p class="p_feedback2">Жодного відгуку не було додано.</p>
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'section_detail.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <div class="line"></div>
+
+    <div class="section_detail">
+        <div class="links2">
+            {% if previous_section %}
+            <a href="{% url 'smart_dogs:section_detail' previous_section.id %}" class="a-link">
+                Попередній розділ: {{ previous_section.title }}
+            </a>
+            {% endif %}
+        </div>
+
+        <h2>{{ section.title }}</h2>
+        <h4>{{ section.content }}</h4>
+
+        {% for detail in section.sectiondetail_set.all %}
+            {% if detail.text %}
+                <p>{{ detail.text }}</p>
+            {% endif %}
+
+            {% if detail.photo %}
+                <img src="{{ detail.photo.url }}" alt="Photo">
+            {% endif %}
+
+            {% if detail.video %}
+                <video width="320" height="240" controls>
+                    <source src="{{ detail.video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% endfor %}
+
+
+        <div class="links2">
+            {% if next_section %}
+                <a href="{% url 'smart_dogs:about_user_course' course_id %}" class="a-link">Повернутися до курсу</a>
+                <a href="{% url 'smart_dogs:section_detail' next_section.id %}" class="a-link2">
+                    Наступний розділ: {{ next_section.title }}
+                </a>
+            
+            {% else %}
+            <a href="{% url 'smart_dogs:about_user_course' course_id %}" class="a-link">Повернутися до курсу</a>
+            {% endif %}
+        </div>
+
+        
+
+    </div>
+
+    
+    <div class="line"></div>
+{% endblock content %}

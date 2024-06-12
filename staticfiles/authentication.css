@@ -1,0 +1,44 @@
+.line {
+    width: auto;
+    height: 1vw;
+    background: #F2D2A3;
+}
+
+.dog_auth {
+    width: 31vw;
+    height: 37vw; 
+    background-image: url('dog_auth.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.offers_h5 {
+    width: 30vw;
+    height: 13vw;  
+    background-image: url('offers_h5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+a {
+    color: #FFF;
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+}

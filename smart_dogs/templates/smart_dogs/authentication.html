@@ -1,0 +1,25 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'authentication.css' %}">
+{% endblock links %}
+
+
+{% block content %}
+
+    <div class="line"></div>  
+
+    <div class="auth">
+        <div class="offers_h5">
+            <a href="{% url 'users:register' %}">РЕЄСТРАЦІЯ</a>
+        </div>
+
+        <div class="dog_auth"></div>
+
+        <div class="offers_h5">
+            <a href="{% url 'users:login' %}">ВХІД</a>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'cooperation.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <div class="main_photo_cooperation">
+        <h2>наша мiсiя - зробити навчання доступним i цiкавим для кожного</h2>
+    </div>
+
+    <div class="advantages">
+        <h4 class="h4_white">НАШI ПЕРЕВАГИ:</h4>
+
+        <div class="adv_div">
+            <div class="adv">
+                <h5 class="h5_white">доступність освiти</h5>
+                <p class="p_white">Ми дбаємо про те, щоб кожна людина мала можливість навчатися, будь-де та будь-коли</p>
+            </div>
+            <div class="adv"> 
+                <h5 class="h5_white">Навчання українською</h5>
+                <p class="p_white">Проблема сьогодення - брак або повна відсутність якісних навчальних ресурсів українською. Ми взяли на себе удар це змінити</p>
+            </div>
+            <div class="adv">
+                <h5 class="h5_white">якiсть навчання</h5>
+                <p class="p_white">Відгуки наших учнів говорять про те, наскільки для нас важлива якість нашого продукту</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="part">
+        <h4>Нашi партнери:</h4>
+        <p>Зовсім скоро тут з’являться лого наших перших партнерів</p>
+        <div class="partners">
+
+            <div class="left_paw"></div>
+            <div class="partner1"></div>
+            <div class="partner2"></div>
+            <div class="partner3"></div>
+            <div class="partner4"></div>
+            <div class="right_paw"></div>
+
+        </div>
+    </div>
+
+{% endblock content %}

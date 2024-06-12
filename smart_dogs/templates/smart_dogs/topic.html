@@ -1,0 +1,48 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'topic.css' %}">
+{% endblock links %}
+
+
+
+{% block content %}
+    <div class="main_photo_topic">
+        <h2>{{ topic }}</h2>
+    </div>
+
+    <div class="newpost">
+        {% if user.is_authenticated %}
+            <a href="{% url 'smart_dogs:new_entry' topic.id %}" class="main_button2">додати новий пост</a>
+
+        {% else %}
+            <p class="p_entry2">
+                Щоб додати новий пост 
+                <a href="{% url 'smart_dogs:authentication' %}" class="p_entry2">увійдіть</a>.
+            </p>
+        {% endif %}
+    
+    
+        <div class="entries">
+            {% for entry in entries %}
+                <div class="entry">
+                    <p class="p_entry2">{{ entry.date_added|date:'d.m.Y H:i' }} - {{ entry.owner.username }}</p>
+                    <p class="p_entry">{{ entry.text|linebreaks }}</p>
+
+                    {% if entry.owner == user %}
+                        <a href="{% url 'smart_dogs:edit_entry' entry.id %}" class="p_entry2">редагувати</a>
+                    {% endif %}
+
+                    </div> 
+            {% empty %}
+                <p class="p_entry2">Жодного посту не було додано.</p>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+{% endblock content %}

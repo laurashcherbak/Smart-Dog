@@ -1,0 +1,65 @@
+.main_photo_courses {
+    height: 580px;  
+    background-image: url('main_photo_courses.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courses {
+    background-color: #211C16;
+}
+
+.courses_name {
+    font-family: "Roboto Condensed";
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 1vw;
+    color: #211C16;
+}
+
+.courses_name2 {
+    color: #FFF;
+    font-family: "Roboto Condensed";
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 1vw;
+}
+
+.all_courses {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw;
+    justify-content: center;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vw;
+    width: 26vw;
+    height: 26vw;
+    background: #F7E7CE;
+}
+
+.cs {
+    display: flex;
+    padding: 2vw;
+    justify-content: center;
+    color: #FFF;
+    font-family: "Montserrat Alternates";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

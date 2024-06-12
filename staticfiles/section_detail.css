@@ -1,0 +1,102 @@
+.line {
+    width: auto;
+    height: 1vw;
+    background: #211C16;
+}
+
+img {
+    width: 60vw;
+    height: 30vw;
+    object-fit: cover;
+    margin: 1vw;
+}
+
+video {
+    width: 60vw;
+    height: 30vw;
+    margin: 1vw;
+}
+
+.section_detail {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #211C16;
+    font-family: "Montserrat Alternates";
+    font-size: 2.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 1vw;
+    text-align: center;
+}
+
+h4 {
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 1vw;
+    width: 90vw;
+    text-align: center;
+}
+
+p {
+    color: #000;
+    text-align: justify;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 90vw;
+    margin: 1vw;
+}
+
+.a-link {
+    color: #A67C52;
+    text-align: justify;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 90vw;
+    width: 45vw;
+}
+
+.a-link2 {
+    color: #A67C52;
+    text-align: end;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 45vw;
+}
+
+.a-link3 {
+    color: #A67C52;
+    text-align: start;
+    font-family: "Roboto Condensed";
+    font-size: 1.2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 45vw;
+}
+
+.links2 {
+    display: flex;
+    width: 90vw;
+    align-items: flex-start;
+}
+

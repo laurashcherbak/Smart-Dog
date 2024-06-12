@@ -1,0 +1,81 @@
+
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock links %}
+
+
+
+
+
+{% block content %}
+    <div class="main_photo">
+        <h2>Вивчайте кiнологiю разом з</h2>
+        <h1>SMART DOG</h1>
+        <h2>– вашим провiдником у свiтi собак!</h2>
+        <a href="{% url 'smart_dogs:courses' %}" class="main_button">переглянути курси</a>
+    </div>
+
+    
+
+    <div class="offers">
+        <h3>Ласкаво просимо у дружню сім'ю SmartDog!</h3>
+        <h4>Ми пропонуємо:</h4>
+
+        <div class="offers_info">
+            <div class="offers_div">
+                <h5 class="offers_h5">великий вибір курсів</h5>
+                <p>Які вже можна переглянути <a href="{% url 'smart_dogs:courses' %}">ТУТ</a>!</p>
+            </div>
+
+            <div class="offers_div">
+                <h5 class="offers_h5">форум для обговорень</h5>
+                <p>Бажаєш долучитися? <a href="{% url 'smart_dogs:forum' %}">Так, Хочу долучитися!</a></p>
+            </div>
+
+            <div class="offers_div">
+                <h5 class="offers_h5">підтримка кінологів</h5>
+                <p>Запишись до нас на курси та отримай цю можливість!</p>
+            </div>
+
+        </div>
+
+        <div class="dog1"></div>
+           
+    </div>
+
+    <div class="adv">
+        <h4>НАШІ ПЕРЕВАГИ:</h4>
+        <div class="advantages">
+        
+            <div class="adv_info">
+                <h5>Навчання онлайн</h5>
+                <p>Навчаємось у зручному для нас місці, у зручний час.</p>
+            </div>
+            <div class="adv_info">
+                <h5>З нами #Вчитись_цiкаво</h5>
+                <p>Розробляючи програму курсу, ми дбаємо щоб навчальний процес був інтерактивним та цікавим.</p>
+            </div>  
+            <div class="adv_info">
+                <h5>Практика</h5>
+                <p>Ми націлені на практику, тому у курсах передбачено багато практичних завдань.</p>
+            </div class="adv_info">  
+            <div class="adv_info">
+                <h5>Сертифікати</h5>
+                <p>Після успішного проходження тестування ви отримаєте сертифікат.</p>
+            </div class="adv_info">  
+            <div class="adv_info">
+                <h5>Безкоштовне навчання</h5>
+                <p>Навчаємось у зручному для нас місці, у зручний час</p>
+            </div>  
+            <div class="adv_info">
+                <h5>сучасний підхід</h5>
+                <p>використовуємо нові корисні методи сучасної кінології</p>
+            </div>          
+        </div>
+    </div>
+
+{% endblock content %}

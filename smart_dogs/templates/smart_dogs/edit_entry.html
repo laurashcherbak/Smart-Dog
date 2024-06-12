@@ -1,0 +1,21 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'new_entry.css' %}">
+{% endblock links %}
+
+{% block content %}
+  <div class="line"></div>  
+
+  <h2>Відредагуйте пост:</h2>
+
+  <form action="{% url 'smart_dogs:edit_entry' entry.id %}" method='post' class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit" class="button">зберегти зміни</button>
+  </form>
+
+{% endblock content %}
+    

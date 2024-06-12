@@ -1,0 +1,23 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+  <link rel="stylesheet" href="{% static 'new_entry.css' %}">
+{% endblock links %}
+
+{% block content %}
+
+  <div class="line"></div>  
+
+  <h2>Напишіть новий відгук тут:</h2>
+    
+  <form action="{% url 'smart_dogs:new_feedback' %}" method='post' class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit" class="button">додати відгук</button>
+  </form>
+    
+{% endblock content %}
+
+

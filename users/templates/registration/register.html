@@ -1,0 +1,27 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock links %}
+
+{% block content %}
+
+  <div class="line"></div>  
+
+  <div class="login_div">
+
+    <h2>Зареєструватися:</h2>
+
+    <form method="post" action="{% url 'users:register' %}" class="form">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button name="submit">Зареєструватися</button>
+      <input type="hidden" name="next"
+        value="{% url 'smart_dogs:index' %}" />
+    </form>
+  </div>
+
+{% endblock content %}

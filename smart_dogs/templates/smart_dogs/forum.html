@@ -1,0 +1,39 @@
+{% extends "smart_dogs/base.html" %}
+{% load i18n static %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'forum.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <div class="fm">
+        <div class="main_photo_forum">
+            <h2>Ласкаво просимо</h2>
+            <h2>на наш форум!</h2>
+        </div>
+
+        <div class="forum">
+            <h5>Тут ви знайдете розділи для обговорення найрізноманітніших тем. Ми створили велику бібліотеку статей, які охоплюють усі аспекти кінології та дресирування собак. Розділіть свої думки, досвід та питання з іншими учасниками спільноти. Разом ми можемо зробити кожного власника щасливішим та собак краще навченими!"</p>
+            <h4>Теми для ОБГОВОРЕННЯ:</h4>
+            
+            <div class="topic">
+                <ul>
+                    {% for topic in forum %}
+                        <li>
+                            <a href="{% url 'smart_dogs:topic' topic.id %}">{{ topic }}</a>
+                        </li>
+                    {% empty %}
+                        <li>Жодної теми не було додано.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            
+        </div>
+        
+
+        <div class="button2"><a href="{% url 'smart_dogs:new_topic' %}" class="main_button2">додати тему</a></div>
+    </div>
+        
+{% endblock content %}
