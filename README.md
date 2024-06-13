@@ -1,7 +1,7 @@
 # Smart-Dog
 Smart-Dog is an innovative online platform designed to help dog owners to get knowledge in canine training. The platform offers content in Ukrainian. Administrators have the ability to create and manage courses, engage with users on forums, and send feedbacks. Meanwhile, users can enroll in courses, share feedback, participate in discussions, and receive personalized support.
 
-# Instructions for the "SmartDog" Information System - Canine School
+# Instructions for the "SmartDog" Information System - The Canine School
 
 1. Download the project from the repository.
 2. Activate the virtual environment: Ensure that the virtual environment is activated. In the terminal or command prompt, navigate to the project directory and activate the virtual environment:
